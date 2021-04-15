@@ -1,0 +1,12 @@
+<% var user %>
+<%- include('partials/header')%> 
+<%- include('partials/navbar') %> 
+<div class="container">
+    <% if(user?.name) { %>
+        <h1>Welcome, <%= user?.name %> </h1>
+    <% } else { %>
+        <h1>Welcome, Mehmon</h1>
+    <% } %>   
+</div>
+
+<%- include('partials/footer') %> 

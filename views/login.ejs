@@ -1,0 +1,33 @@
+<%- include('partials/header')%> 
+<%- include('partials/navbar') %> 
+<div class="container">
+    <main class="mt-4">
+        <div class="container">
+            <h1 class="text-center"><%= title %> </h1>
+            <div class="row">
+                <form class="col s12" action="/login" method="POST">
+                    <% if (error) { %> 
+                        <div class="materialert error"><%= error %> </div>
+                    <% } %> 
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" autocomplete="off" class="validate" name="email" required />
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" autocomplete="off" class="validate" name="password" required />
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<%- include('partials/footer') %> 

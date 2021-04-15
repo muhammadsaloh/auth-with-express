@@ -1,0 +1,18 @@
+<% var user %> 
+<nav>
+<div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">April</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <% if(!user?.name) { %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/registration">Registration</a></li>
+            <% } else {%>
+              <li><a href="/user"> <%= user?.name %>  </a></li>
+              <li><a href="/exit"> Exit </a></li>
+            <% } %>  
+          </ul>
+        </div>
+    </div>
+</nav>
